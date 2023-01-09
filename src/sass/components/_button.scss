@@ -11,7 +11,8 @@
     position: relative;
 
     @include mobile {
-        font-size: 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
     }
 
     &__txt,
@@ -22,6 +23,9 @@
 
     &__txt {
         padding: 1rem 2rem;
+        @include mobile {
+            padding: 0.8rem 1.5rem
+        }
     }
 
     &__icon {

@@ -4,6 +4,7 @@ import Footer from './Footer'
 import Routes from '../routes/Routes'
 import SideBar from './SideBar'
 import { useEffect } from 'react'
+import Header from './Header'
 const Layout = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -14,15 +15,16 @@ const Layout = () => {
                 <div>
                     {/* <Header {...props}/> */}
                     <SideBar/>
-                    
+                    <Header/>
                     <div className="container">
+                        
                         <div className="main">
                             <Routes/>
                             
                         </div>
-                        <Footer/>
+                        
                     </div>
-                    
+                    <Footer/>
                 </div>
             )}/>
         </BrowserRouter>

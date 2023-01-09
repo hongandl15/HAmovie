@@ -1,65 +1,49 @@
 .header {
-    color: $txt-color;
-    position: fixed;
+    display: none;
+    position: sticky;
     top: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    color: white;
+    box-sizing: border-box;
+    font-size: 35px;
+    padding: 10px;
+    line-height: 250px;
     width: 100%;
-    z-index: 99;
-    height: $header-height;
-    transition: height 0.3s ease;
-
-    .container {
-        height: 100%;
+    z-index: 200;
+    border-bottom: ridge  rgb(97, 97, 97);
+    background-color: $main-color;
+    @include mobile{
+        display: block;
+    }
+    .Menuheader{
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    button{
+        border: ridge rgb(65, 64, 64);
+        font-size: 35px;
+        padding: 5px;
+        line-height: 25px;
+        color: white;
+        background-color: rgb(43, 42, 42);
     }
 
-    &.shrink {
-        height: $header-shrink-height;
-        box-shadow: $box-shadow;
-        background-color: rgb(28, 28, 28);
-        z-index: 100;
-
-    }
-
-
-    &__menu {
-        @include flex(center, space-between);
-        height: 100%;
-        font-size: 1.5rem;
-        
-        &__item {
-            margin-left: 39px;
-        }
-
-        &__item.active {
-            font-weight: 600;
-            color: red;
-        }
-
-        &__item:hover {
-            color: red;
-        }
-
-        &__left,
-        &__right {
-            @include flex(center, center);
-            height: 100%;
-        }
-
-
-        &__right {
-            font-size: 2.25rem;
-
-            &__item {
-                @include flex(center, center);
+    .popupmenu{
+        display: none;
+        li{
+            height: 60px;
+            line-height: 23px;
+            margin: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            list-style:none;
+            color: rgb(255, 255, 255);
+            font-size: 23px;
+            border: ridge rgb(68, 68, 68);
+            border-radius: 20px;
+            &:hover{
+                opacity: 0.7;
             }
-        }
-
-        &__left {
-            &__close {
-                display: none;
-            }
-
         }
     }
 }

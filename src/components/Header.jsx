@@ -1,97 +1,33 @@
-import React, { useRef, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React from 'react'
+import {useState} from 'react';
+import { AiOutlineMenu } from 'react-icons/ai'
+import {BsFillHouseDoorFill} from 'react-icons/bs'
+import {MdOutlineExplore} from 'react-icons/md'
+import {BiLogIn} from 'react-icons/bi'
+import {AiFillSetting, AiOutlineUser} from 'react-icons/ai'
+import {RiVipDiamondFill} from 'react-icons/ri'
 
-
-const mainNav = [
-    {
-        display: "Trang chủ",
-        path: "/"
-    },
-    {
-        display: "Phim Hot",
-        path: "/catalog"
-    },
-
-    {
-        display: "Liên hệ",
-        path: "/contact"
-    },
-    {
-        display: "About",
-        path: "/about"
-    }
-]
 
 const Header = () => {
-
-    const { pathname } = useLocation()
-    const activeNav = mainNav.findIndex(e => e.path === pathname)
-
-    const headerRef = useRef(null)
-
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-                headerRef.current.classList.add('shrink')
-            } else {
-                headerRef.current.classList.remove('shrink')
-            }
-        })
-        return () => {
-            window.removeEventListener("scroll")
-        };
-    }, []);
-
-    const menuLeft = useRef(null)
-
-    const menuToggle = () => menuLeft.current.classList.toggle('active')
-
+    
+    const [isActive, setIsActive] = useState(false);
+    const handleClick = () => {
+        setIsActive(current => !current);
+      };
     return (
-        <div className="header" ref={headerRef}>
-            <div className="container">
-                {/* <div className="header__logo">
-                    <Link to="/">
-                        <img src={logo} alt="" />
-                    </Link>
-                </div> */}
-                <div className="header__menu">
-                    {/* <div className="header__menu__mobile-toggle" onClick={menuToggle}>
-                        <i className='bx bx-menu-alt-left'></i>
-                    </div> */}
-                    <div className="header__menu__left" ref={menuLeft}>
-                        {/* <div className="header__menu__left__close" onClick={menuToggle}>
-                            <i className='bx bx-chevron-left'></i>
-                        </div> */}
-                        {
-                            mainNav.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className={`header__menu__item header__menu__left__item ${index === activeNav ? 'active' : ''}`}
-                                    onClick={menuToggle}
-                                >
-                                    <Link to={item.path}>
-                                        <span>{item.display}</span>
-                                    </Link>
-                                </div>
-                            ))
-                        }
-                    </div>
-                    <div className="header__menu__right">
-                        <div className="header__menu__item header__menu__right__item">
-                            <i className="bx bx-search"></i>
-                        </div>
-                        {/* <div className="header__menu__item header__menu__right__item">
-                            <Link to="/cart">
-                                <i className="bx bx-shopping-bag"></i>
-                            </Link>
-                        </div>
-                        <div className="header__menu__item header__menu__right__item">
-                            <i className="bx bx-user"></i>
-                        </div> */}
-                    </div>
-                </div>
+        <div className="header">
+            <div style={{'display':'flex', 'justifyContent':'space-between'}}>
+             <button onClick={handleClick}><AiOutlineMenu/></button>
+             <button onClick={handleClick}><AiOutlineUser/></button>
             </div>
+            <div style={{ display: isActive ? 'block' : 'none'}}  className='popupmenu'>
+                <li><BsFillHouseDoorFill/>Home</li>
+                <li><MdOutlineExplore/>Explore</li>
+                <li><AiFillSetting/>Setting</li>
+            </div>
+
         </div>
+        
     )
 }
 

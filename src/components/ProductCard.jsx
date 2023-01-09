@@ -3,7 +3,6 @@ import {BsStarFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import photo from '../assets/images/unknown.jpg'
 
-
 const IMG_URL = 'https://image.tmdb.org/t/p/w300/'
 
 const ProductCard = (movie) => {

@@ -52,13 +52,19 @@
                 font-size: 20px;
                 display: inline-block;
                 margin:20px;
+                @include mobile{
+                    padding: 10px;
+                }
             }
 
             li:hover{    
                 color: red;
                 cursor: pointer;
             }
-            
+            @include mobile{
+                
+                margin-bottom: 50px ;
+            }
         }
 
         .bodying{
