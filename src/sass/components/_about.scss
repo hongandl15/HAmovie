@@ -1,0 +1,50 @@
+.about{
+    position: relative;
+    .quote{
+        text-align: center;
+        padding-top: 10%;
+        font-size: 50px;
+        color: white;
+        height: 500px;
+    }
+     #myVideo{
+        position: absolute;
+        top: -100px;
+        z-index: -1;
+     }
+
+    .introduce{
+        padding: 50px 200px 50px 200px ;
+        text-align: center;
+        font-size: 26px;
+        color: white;
+        font-weight: lighter;
+    }
+
+    .watchnow{
+        background: url('https://static.vecteezy.com/system/resources/previews/001/557/683/original/abstract-overlapping-blue-background-free-vector.jpg') no-repeat;
+        text-align: center;
+        height: 500px;
+        font-size: 50px;
+        color: white;
+        height: 500px;
+        padding-top: 100px;
+        
+
+        h1{
+            color: rgb(255, 252, 199);
+        }
+        h2{ 
+            margin-left: 32%;
+            text-align: center;
+            background-color: rgb(90, 90, 251);
+            width: 400px;
+            transition: 1s background-color;
+        }
+        h2:hover{ 
+            background-color: rgb(251, 90, 90);
+            cursor: pointer;
+        }
+    }
+}
+

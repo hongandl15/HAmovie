@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;   
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+    *{
+      zoom: 0.983;
+    }
+  }
+
+  @media (-webkit-device-pixel-ratio: 1.5) {
+    *{
+      zoom: 0.966;
+    }
+  }
+
+html {
+    font-size: 13px; 
+}
+
+body {
+    background-color: rgb(25, 25, 25);
+    font-family: "Roboto", sans-serif;
+    cursor: crosshair;
+}
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb {background-color: rgb(62, 62, 62); border-radius: 3px;}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    color: $main-color;
+}
+
+img {
+    max-width: 100%;
+}
+
+@each $color, $val in $colors {
+    .color-#{$color} {
+        color: $val;
+    }
+
+    .bg-#{$color} {
+        background-color: $val;
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-#{$val} {
+        grid-template-columns: repeat($val, 1fr);
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-md-#{$val} {
+        @include tablet {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-sm-#{$val} {
+        @include mobile {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+.container {
+    width: 75%;
+    margin-left: 5%;
+    margin-right: 20%;
+    // margin: auto;
+}
+
+.main {
+    // margin-top: $header-height;
+    // margin-bottom: 2rem;
+    min-height: 100vh;
+
+    @include tablet {
+        margin-top: calc(#{$header-tablet-height} + 20px);
+    }
+
+    @include mobile {
+        margin-top: calc(#{$header-mobile-height} + 10px);
+    }
+}
+
+.header_title{
+    font-size:50px;
+    color:rgb(223, 221, 221);
+    margin:10px;
+    text-align:center;
+    font-weight: bold
+}
+
+.grid {
+    display: grid;
+}
+
+.comments{
+    background-color: rgb(255, 255, 255);
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 40px;
+    text-align: center;   
+}
+
+.fb-comments {
+    -webkit-filter: hue-rotate(120deg);
+    filter: hue-rotate(120deg);
+}
+
+hr{
+    margin: 0;
+}
+
+.background{
+    padding-top: 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/e89c9679-2f5f-491d-924c-c58924a8ee4b/b059ba59-7ad6-4d88-9d0d-41262a5072ff/VN-vi-20221121-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    height: 700px;
+    background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .similar {
+      display: none;
+    }
+
+    .sidebar{
+        display: none;
+    }
+    .container {
+        width: 95%;
+        margin: auto;
+        // margin: auto;
+    }
+  }

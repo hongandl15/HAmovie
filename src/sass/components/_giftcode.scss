@@ -1,0 +1,36 @@
+.giftcodeform{
+    margin: 20px;
+    width: 500px;
+    padding: 22px;
+    font-size: 1rem;
+    color: $txt-color;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+    border: ridge rgb(199, 197, 197);
+    h1{
+        font-size: 50px;
+        color: white;
+    }
+    input{
+        height: 40px;
+        padding: 10px;
+        background-color: rgb(239, 237, 237);
+        font-size: 30px;
+    }
+}
+
+.buttoncode{
+    button{
+    margin: 20px;
+    margin-left: 0;
+    padding: 15px 20px 15px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(252, 252, 96);
+    color: rgb(88, 87, 87);
+    &:hover{
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    }
+}

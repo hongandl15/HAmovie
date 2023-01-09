@@ -1,0 +1,65 @@
+.header {
+    color: $txt-color;
+    position: fixed;
+    top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    z-index: 99;
+    height: $header-height;
+    transition: height 0.3s ease;
+
+    .container {
+        height: 100%;
+    }
+
+    &.shrink {
+        height: $header-shrink-height;
+        box-shadow: $box-shadow;
+        background-color: rgb(28, 28, 28);
+        z-index: 100;
+
+    }
+
+
+    &__menu {
+        @include flex(center, space-between);
+        height: 100%;
+        font-size: 1.5rem;
+        
+        &__item {
+            margin-left: 39px;
+        }
+
+        &__item.active {
+            font-weight: 600;
+            color: red;
+        }
+
+        &__item:hover {
+            color: red;
+        }
+
+        &__left,
+        &__right {
+            @include flex(center, center);
+            height: 100%;
+        }
+
+
+        &__right {
+            font-size: 2.25rem;
+
+            &__item {
+                @include flex(center, center);
+            }
+        }
+
+        &__left {
+            &__close {
+                display: none;
+            }
+
+        }
+    }
+}

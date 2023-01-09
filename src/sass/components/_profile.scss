@@ -1,0 +1,217 @@
+.profile{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    display:flex ;
+    flex-wrap: wrap;
+    @include mobile{
+        flex-direction: column;
+    }
+}
+
+.profilesidebar{
+    background-color: rgb(26, 24, 24);
+    box-shadow: $box-shadow;
+    top:0;
+    z-index: 3;
+    width: 25%;
+    height: 920px;
+    padding-top: 30px;
+    border-right: groove thin rgb(139, 131, 131) ;
+    border-left: groove thin rgb(139, 131, 131) ;
+    text-align: center;
+    color:white;
+    .avatar{
+        position: relative;
+        img{
+            width:80%;
+            border-radius: 50%;
+        }
+        .avatarEdit{
+            position: absolute;
+            top: 5%;
+            right: 10%;
+            width: 45px;
+            padding: 5px;
+            padding-top: 7.5px;
+            font-size: 25px;
+            text-align: center;
+            color: rgb(210, 200, 200);
+            background-color: rgb(71, 70, 70);
+            border-radius: 50%;
+            &:hover{
+                color: rgb(71, 70, 70);
+                background-color: rgb(210, 200, 200);
+                cursor: pointer;
+            }
+        }
+
+        
+    }
+
+    .profileinfo{
+        color: aliceblue;
+        padding: 10px;
+        font-size: 25px;
+
+        h4:hover{
+            color:rgb(71, 70, 70);
+            cursor: pointer;
+        }
+        
+        .info{
+            color: rgb(169, 166, 166);
+            padding: 10px;
+            text-align: left;
+            padding-top: 20px;
+            margin-bottom: 20px;
+            font-size: 17px;   
+        }
+
+        .dashboard{
+            line-height: 20px;
+            margin: 20px;
+            padding: 10px;
+            padding-left: 15px;
+            background-color: rgb(42, 41, 41);
+            border-radius: 20px;
+            border: ridge rgb(31, 30, 30);
+            display: flex;  
+            font-size: 21px;
+            color: rgb(205, 200, 200);
+        }
+        
+        .dashboard:hover{
+            background-color: rgb(119, 109, 109);
+            cursor: pointer;
+        }
+    }
+
+    @include mobile{
+        width: 100%;
+    }
+}
+
+.profileLibrary{
+    display: block;
+    width: 75%;
+    .watchlist{
+        margin-top: 20px;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 233px;
+        font-size: 30px;
+        .sliderwatchlist{
+            margin: auto;
+            margin-top: 20px;
+            width: 95%;
+        }
+        @include mobile{
+            width: 100%;
+            margin-bottom: 230px;
+        }
+    }
+    .toprated{
+        margin: auto;
+        margin-top: 30px;
+        width: 95%;
+        height: 295px;
+        display: flex;
+        background-color: rgb(26, 24, 24);
+        box-shadow: $box-shadow;
+        color: rgb(169, 166, 166);
+        .sub{
+            padding: 20px;
+            width: 300px;
+            font-size: 30px;
+            text-align: center;
+            color: yellow;
+            .premium{
+                margin-bottom: 10px;
+            }
+        }
+
+        .detail{
+            width: 100%;
+            
+            padding: 15px;
+            h4{
+                font-size: 20px;
+                width: 100%;
+                
+            }
+            hr{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            img{
+                margin: 20px;
+                width: 70px
+            }
+        }
+    }
+    .setting{
+        width: 100%;
+        height: 233px;
+    }
+    @include mobile{
+        width: 100%;
+        margin: auto;
+    }
+
+}
+
+.profileDetail{
+    width: 90%;
+    box-sizing: border-box;
+    background-color: rgb(26, 24, 24);
+    box-shadow: $box-shadow;
+    padding: 20px;
+    color: rgb(169, 166, 166);
+    margin-top: 20px;
+    border-radius: 20px;
+    .displayName, .displayEmail, .displayPassword{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        margin-left: 0;
+        h3{
+            color: white;
+            margin: 5px;
+            
+        }
+
+        input{
+            color: rgb(222, 221, 221);
+            background-color: rgb(57, 57, 57);
+            padding: 5px;
+            border-radius: 10px;
+            width: 50%;
+        }
+         
+    }
+    .editButton{
+        height: 35px;
+        padding:5px;
+        // width: 50px;
+        cursor: pointer;
+        background-color: rgb(60, 57, 57);
+        color: rgb(219, 229, 234);
+        border-radius: 5px;
+        font-size: 15px;
+        .editicon{
+            font-size: 15px;
+        }
+
+        &:hover{
+            background-color: rgb(86, 81, 81); 
+        }
+    }
+    @include mobile{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+
+

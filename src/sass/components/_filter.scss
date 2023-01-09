@@ -1,0 +1,93 @@
+.filter{
+    margin: auto;
+    width: 85%;
+    height: 33  0px;
+    border: ridge rgb(89, 89, 89) 1px;
+    border-radius: 30px;
+    box-shadow: $box-shadow;
+    padding: 40px;
+    margin-top: 30px;
+    background-color: rgb(41, 41, 41);
+    
+
+    &_tags{
+        button{
+            margin: 7px;
+            padding: 6px;
+            font-size: 15px;
+            border-radius: 10px;
+            border-color: rgb(66, 66, 66);
+            color: white;
+            background-color: rgba(255, 0, 0, 0);
+            &:hover{
+                border-color: grey;
+                color: grey;
+                cursor: pointer;
+            }
+
+        }
+    }
+
+    &_box{
+        display: flex;
+    }
+
+    &_date{
+        width: 500px;
+        margin-left: 10px;
+        color: white;
+        &_title{
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        label{
+            color: grey;
+        }
+        .datepicker{
+            // display: block;
+            margin: 8px;
+            width: 150px;
+            font-size: 15px;
+            padding: 3px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: $input-color;
+            color: white;
+        }
+    }
+
+    &_sort{
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        color: white;
+        select{
+            margin: 8px;
+            margin-left: 0px;
+            width: 120px;
+            height: 30px;
+            color: white;
+            border-radius: 8px;
+            padding: 5px;
+            border: ridge rgb(182, 179, 179) 1px;
+            background-color: $input-color;
+        }
+
+        .buttongo{
+            margin: 7px;
+            padding: 6px;
+            font-size: 15px;
+            border-radius: 10px;
+            border-color: rgb(105, 104, 104);
+            color: white;
+            background-color: rgb(150, 138, 5);
+            &:hover{
+                border-color: grey;
+                color: grey;
+                cursor: pointer;
+            }
+        }
+    }
+   
+}

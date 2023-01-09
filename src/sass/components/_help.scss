@@ -1,0 +1,51 @@
+.help{
+    color: white;
+    .help_header{
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        margin: 20px;
+    }
+    input{
+        height: 30px;
+        width: 800px;
+        margin: 20px;
+        padding: 20px;
+        margin-left: 15%;
+    }
+    h2{
+        font-size: 30px;
+        margin: 20px;
+    }
+    h3{
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .questions_container{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        
+        .question{
+            padding: 20px;
+            border-radius: 30px;
+            background-color: rgb(34, 34, 34);
+            width: 30%;
+            margin: 30px;
+            h4{
+                font-size: 17px;
+                color: rgb(168, 166, 166);
+            }   
+            li{
+                margin: 20px;
+                margin-left: 0;
+            }
+            li:hover{
+                color: red;
+                cursor: pointer;
+            }
+        }
+              
+    }
+}

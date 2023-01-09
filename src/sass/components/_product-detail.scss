@@ -1,0 +1,86 @@
+.productDetail {
+    text-align: left;
+    margin-bottom: 30px;
+    position: relative;
+    
+    &__image {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        
+        .banner_img{
+            top:10%;
+            height: 90%;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: calc(#{$header-height} * -1);
+            opacity: 0.7;
+            @include mobile{
+                top: 0;
+                margin-top: 0px;
+            }
+        }
+
+        .poster_img{
+            width: 200px;
+            position: absolute;
+            left: 5%;
+            bottom: 0;
+            z-index: 1;
+            border-radius: 10px;
+            opacity: 1;
+        }
+
+        .movie_tag{
+            background-color: white;
+            color: white;
+            font-size: 50px;
+            z-index: 1000;
+        }
+
+        h3{
+            width: 700px;
+            position: absolute;
+            left:20%;
+            bottom:26%;
+            color: whitesmoke;
+            font-size: 50px;
+            z-index: 1;
+            @include mobile{
+                width: 200px;
+                font-size: 35px;
+                left: 50%;
+            }
+        }    
+        
+        .watchbtn{
+            position: absolute;
+            left: 20%;
+            bottom: 17%;
+            z-index: 1;
+            @include mobile{
+                left: 50%;
+            }
+        }
+
+        .trailerbtn{
+            position: absolute;
+            left: 30%;
+            bottom: 17%;
+            z-index: 1;
+            @include mobile{
+                left: 73%;
+            }
+        }
+
+        .moviediv{
+            margin-left: 100px ;
+            height: 100px;
+            width: 200px;
+            padding: 20px;
+        }
+    }
+
+    
+}

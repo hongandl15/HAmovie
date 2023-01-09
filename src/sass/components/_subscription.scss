@@ -1,0 +1,108 @@
+.subscription{
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .standard{
+        position: relative;
+        margin: 30px;
+        padding: 20px;
+        height: 400px;
+        width: 300px;
+        color:rgb(252, 252, 252);
+        background-color: $main-color;
+        border-radius: 20px;
+        border: ridge rgb(171, 170, 170);
+        box-shadow: $box-shadow;
+        text-align: center;
+
+        .basic{
+            color: rgb(255, 255, 255);
+        }
+        .standardcolor{
+            color: rgb(0, 210, 179);
+        }
+        .premium{
+            color: rgb(225, 215, 75);
+        }
+
+        &_title{
+            position: relative;
+            left: -45px;
+            text-align: center;   
+            font-size: 40px;
+            background-color: rgba(251, 85, 85, 1);
+            border-radius: 10px;
+            width: 345px;
+        }
+
+        &_price{
+            font-size: 80px;
+        }
+
+        &_function{
+            div{
+                text-align: left;
+                font-size: 20px;
+                margin-top: 10px;
+                padding: 5px;
+            }
+        }
+
+        &_button{
+            margin: auto;
+            margin-top: 20px;
+            background-color: grey;
+            border: ridge white;
+            border-radius: 15%;
+            padding: 5px;
+            width: 100px;
+            font-size: 15px;
+            &:hover{
+                opacity: 0.2;
+                cursor: pointer;
+            }
+        }
+        &:hover{
+            opacity: 0.9;
+            
+        }
+
+        .hotsale{
+            position: absolute;
+            right: -30px;
+            bottom: 5px;
+            transform: rotate(-45deg);
+            height: 20px;
+            width: 100px;
+            background-color: red;
+            color: yellow;
+            border-radius: 5px;       
+        }
+        
+    }
+
+    .tick{
+        color:  rgb(0, 255, 0);
+    }
+    .untick{
+        color:  rgb(247, 32, 32);
+    }
+    .mid{
+        margin-top: 70px;
+    }
+}
+
+.backgroundsub{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://c.wallhere.com/photos/cb/e7/The_Avengers_Avengers_Age_of_Ultron_superhero_lines_technology_Marvel_Comics_Captain_America_stars-1355411.jpg!d");
+    background-size: 100% 100%;
+    padding: 11.5%;
+    background-repeat: no-repeat;
+    @include mobile{
+        background-image: none;
+    }
+}
+
+
+
+

@@ -1,0 +1,83 @@
+.setting{
+    padding: 20px;
+    box-shadow: rgba(68, 67, 67, 0.2) 0px 8px 24px;
+    background-color: rgb(25, 25, 25);
+    margin: 20px;
+    box-sizing: border-box;
+    &_title{
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+        margin: 15px;
+    }
+    &_option{
+        box-sizing: border-box;
+        height: 60px;
+        line-height: 40px;
+        width: 70%;
+        box-shadow: rgba(68, 67, 67, 0.2) 0px 8px 24px;
+        background-color: rgb(62, 61, 61);
+        color: rgb(176, 173, 173);
+        margin: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 20px;
+        input[type='radio']:after {
+            width: 12px;
+            height: 12px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #d1d3d1;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+
+        input[type='radio']:checked:after {
+            width: 12px;
+            height: 12px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #eff617;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+        
+        &:hover{
+            background-color: grey;
+            cursor: pointer;
+        }
+        @include mobile{
+            width: 97%;
+        }
+    }
+}
+
+
+.setting_footer{
+    padding: 40px;
+    li{
+       color: #cacaca; 
+       font-size: 25px;
+    }
+    li:hover{
+        color: rgb(254, 76, 76);
+    }
+
+    .giftcode{
+        margin: 20px;
+        h1{
+            color: white;
+        }
+        &:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+}

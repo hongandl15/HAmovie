@@ -1,0 +1,54 @@
+.sidebar{
+    position: fixed;
+    background-color: rgb(32, 30, 30);
+    top:0;
+    left: 0;
+    z-index: 99;
+    width: 5%;
+    height: 100%;
+    padding-top: 50px;
+    box-shadow: $box-shadow;
+    text-align: center;
+    .circleava{
+        background-color: $txt-color;
+        color: black;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin: 15px;
+        &:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+
+    .circlevip{
+        background-color: rgb(65, 62, 62);
+        padding: 10px;
+        color: rgb(255, 236, 62);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: solid black;
+        margin: 10px;
+        &:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+
+    li{
+        list-style: none;
+        width: 50px;
+        height: 50px;
+        margin-top: 35px;
+        padding-top: 20px ;
+        margin-left: auto;
+        margin-right: auto;
+        color: $txt-color;
+        font-size: x-large;
+        &:hover{
+            color:rgb(78, 73, 73);
+        }
+    }
+}

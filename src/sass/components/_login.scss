@@ -1,0 +1,133 @@
+.loginform {
+    background-color: $main-color;
+    margin: auto;
+    width: 400px;
+    padding: 40px;
+    font-size: 1rem;
+    color: $txt-color;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+    border: ridge rgb(199, 197, 197);
+    h1{
+        text-align: center;
+    }
+
+    h3{
+        margin-top: 10px;
+    }
+    input{
+        border-radius: 10px;
+        padding: 8px;
+        margin: auto;
+        margin-top: 10px;
+        background-color: $input-color;
+        display: block;
+        width: 300px;
+        height: 40px;
+        color: white;
+    }
+}
+
+
+.loginformfb {
+    background-color: #345596;
+    margin: auto;
+    width: 350px;
+    padding: 22px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+    border: ridge rgb(199, 197, 197);
+    h1{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    h3{
+        margin-top: 10px;
+    }
+    input{
+        padding: 8px;
+        margin-top: 10px;
+        background-color: white;
+        display: block;
+        width: 300px;
+        height: 40px;
+        color: white;
+    }
+}
+
+.buttonlogin{
+    display: flex;
+    justify-content: center;
+    button{
+        margin:20px;
+        padding: 5px 15px 5px 15px;
+        color: $txt-color;
+        background-color: rgb(63, 61, 61);
+        border-radius: 20px;
+        &:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+}
+
+.buttonloginfb{
+    display: flex;
+    justify-content: center;
+    button{
+        margin:20px;
+        width: 130px;
+        height: 40px;
+        color: white;
+        background-color: #4d77cb;
+        border: none;
+        &:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+}
+
+.sociallogin{
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    img{
+        margin: 10px;
+        width: 40px;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+}
+
+.loginbackground{
+    padding: 20%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.nguyenkimmall.com/images/detailed/697/top-15-phim-bom-tan-xuat-sac-nhat-vu-tru-marvel-thumbnail.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    @include mobile{
+        padding: 10%;
+    }
+}
+
+.forgotpassword{
+    margin: 5px;
+    text-align: center;
+    &:hover{
+        color: rgb(241, 25, 25) 
+    }
+}
+
+.loginsuccess{
+    width: 150px;
+    margin: 25%;
+    h2{
+        font-size: 40px;
+        color: green;
+    }
+}

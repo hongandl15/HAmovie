@@ -1,0 +1,37 @@
+.section {
+    margin-bottom: 5%;
+    padding-right:5%;
+    padding-left:5%;
+
+    & > * ~ * {
+        margin-top: 70px;
+    }
+
+    &__home {
+        width: 82%;
+    }
+
+    &__title {
+        
+        color: $txt-color;
+        font-size: 2rem;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    &__body {
+        color: $txt-color;
+        font-size: 2rem;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    &__catalog {
+        margin-top:70px;
+        padding: 20px;
+        color: $txt-color;
+        font-size: 2rem;
+        text-transform: capitalize;
+        text-align: center;
+    }
+}

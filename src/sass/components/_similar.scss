@@ -1,0 +1,83 @@
+.similar {
+    position: fixed;
+    height: 100%;
+    z-index: 99;
+    width: 20%;
+    color: $txt-color;
+    background-color: rgb(32, 30, 30);
+    top:0;
+    right:0;
+    box-shadow: $box-shadow;
+ 
+    .search{
+        display: flex;
+        justify-content: center;
+        .icon_search{
+            margin-top: 20px;
+            font-size: 40px;
+        }
+        input{
+            height: 40px;
+            border-radius: 30px;
+            height: 50px;
+            margin-top: 14px;
+            background-color: $input-color;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+        }
+    }
+
+    h1{
+        text-align: left;
+        margin: 20px 0px 10px 10px;
+    }
+
+}
+
+
+.productSimilar {
+    text-align: left;
+    padding: 15px;
+    padding-top:20px;
+    padding-bottom:5px;
+
+    &__image {
+        position: static;
+        overflow: hidden;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        display: flex;
+        
+        img {
+            text-align: left;
+            left:0;
+            width: 100px;
+            border-radius: 20px;
+            background-color: rgb(73, 72, 72);
+        }
+
+        &:hover {
+            opacity: 0.8; 
+            color: rgb(172, 168, 168);         
+        }
+
+        h3{
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+        margin-top:5px;
+        color: $txt-color;
+        font-size: 1.6rem;
+        font-weight: lighter;
+        }
+        h4{
+        position: relative;
+        margin: 20px;
+        margin-top: 0px;
+        color: rgb(253, 253, 93);
+        font-size: 13px;
+        }
+    }
+}
+
