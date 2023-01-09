@@ -10,7 +10,7 @@ var url = "https://api.themoviedb.org/3/movie/" + type + API_KEY +"&language=en-
 
 if (props.keyword != null) {
     var keyword = props.keyword
-    url = "https://api.themoviedb.org/3/search/movie/"+ API_KEY +"&query=" + keyword;
+    url = "https://api.themoviedb.org/3/search/movie"+ API_KEY +"&query=" + keyword;
 }
 else if (props.sort != null) {
     var sort = props.sort
