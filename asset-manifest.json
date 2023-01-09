@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/honganmovie/static/css/main.81d53e64.chunk.css",
-    "main.js": "/honganmovie/static/js/main.93d3668a.chunk.js",
-    "main.js.map": "/honganmovie/static/js/main.93d3668a.chunk.js.map",
-    "runtime-main.js": "/honganmovie/static/js/runtime-main.7d91da8f.js",
-    "runtime-main.js.map": "/honganmovie/static/js/runtime-main.7d91da8f.js.map",
-    "static/css/2.76f7af68.chunk.css": "/honganmovie/static/css/2.76f7af68.chunk.css",
-    "static/js/2.abc2fd84.chunk.js": "/honganmovie/static/js/2.abc2fd84.chunk.js",
-    "static/js/2.abc2fd84.chunk.js.map": "/honganmovie/static/js/2.abc2fd84.chunk.js.map",
-    "static/js/3.7446f364.chunk.js": "/honganmovie/static/js/3.7446f364.chunk.js",
-    "static/js/3.7446f364.chunk.js.map": "/honganmovie/static/js/3.7446f364.chunk.js.map",
-    "index.html": "/honganmovie/index.html",
-    "static/css/2.76f7af68.chunk.css.map": "/honganmovie/static/css/2.76f7af68.chunk.css.map",
-    "static/css/main.81d53e64.chunk.css.map": "/honganmovie/static/css/main.81d53e64.chunk.css.map",
-    "static/js/2.abc2fd84.chunk.js.LICENSE.txt": "/honganmovie/static/js/2.abc2fd84.chunk.js.LICENSE.txt",
-    "static/media/boxicons.min.css": "/honganmovie/static/media/boxicons.cbd149c5.ttf",
-    "static/media/slick-theme.css": "/honganmovie/static/media/slick.c94f7671.ttf",
-    "static/media/unknown.592c4e01.jpg": "/honganmovie/static/media/unknown.592c4e01.jpg"
+    "main.css": "/hamovie/static/css/main.9b4fe71b.chunk.css",
+    "main.js": "/hamovie/static/js/main.93d3668a.chunk.js",
+    "main.js.map": "/hamovie/static/js/main.93d3668a.chunk.js.map",
+    "runtime-main.js": "/hamovie/static/js/runtime-main.b4596ed4.js",
+    "runtime-main.js.map": "/hamovie/static/js/runtime-main.b4596ed4.js.map",
+    "static/css/2.e41cfb15.chunk.css": "/hamovie/static/css/2.e41cfb15.chunk.css",
+    "static/js/2.abc2fd84.chunk.js": "/hamovie/static/js/2.abc2fd84.chunk.js",
+    "static/js/2.abc2fd84.chunk.js.map": "/hamovie/static/js/2.abc2fd84.chunk.js.map",
+    "static/js/3.7446f364.chunk.js": "/hamovie/static/js/3.7446f364.chunk.js",
+    "static/js/3.7446f364.chunk.js.map": "/hamovie/static/js/3.7446f364.chunk.js.map",
+    "index.html": "/hamovie/index.html",
+    "static/css/2.e41cfb15.chunk.css.map": "/hamovie/static/css/2.e41cfb15.chunk.css.map",
+    "static/css/main.9b4fe71b.chunk.css.map": "/hamovie/static/css/main.9b4fe71b.chunk.css.map",
+    "static/js/2.abc2fd84.chunk.js.LICENSE.txt": "/hamovie/static/js/2.abc2fd84.chunk.js.LICENSE.txt",
+    "static/media/boxicons.min.css": "/hamovie/static/media/boxicons.cbd149c5.ttf",
+    "static/media/slick-theme.css": "/hamovie/static/media/slick.c94f7671.ttf",
+    "static/media/unknown.592c4e01.jpg": "/hamovie/static/media/unknown.592c4e01.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7d91da8f.js",
-    "static/css/2.76f7af68.chunk.css",
+    "static/js/runtime-main.b4596ed4.js",
+    "static/css/2.e41cfb15.chunk.css",
     "static/js/2.abc2fd84.chunk.js",
-    "static/css/main.81d53e64.chunk.css",
+    "static/css/main.9b4fe71b.chunk.css",
     "static/js/main.93d3668a.chunk.js"
   ]
 }
