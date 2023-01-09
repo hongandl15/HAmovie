@@ -23,12 +23,7 @@ else if (props.sort != null) {
 
     useEffect(() =>{
         setUrl(API_URL);
-        fetch(url_set,{
-            method: "GET",
-            headers: {
-              "Access-Control-Allow-Origin" : "*",
-              "Content-type": "application/json"
-            }}).then((res) => res.json())
+        fetch(url_set).then((res) => res.json())
         .then((data) => {
             setData(data.results);
         });
