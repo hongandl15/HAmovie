@@ -31,7 +31,7 @@
             border-radius: 10px;
             opacity: 1;
             @include mobile{
-                width: 150px;
+                width: 140px;
                 bottom: 15%;
             }
         }
@@ -54,7 +54,7 @@
             @include mobile{
                 width: 150px;
                 font-size: 32px;
-                left: 50%;
+                left: 52.5%;
             }
         }    
         
@@ -74,7 +74,7 @@
             bottom: 17%;
             z-index: 1;
             @include mobile{
-                left: 73%;
+                left: 75%;
             }
         }
 
@@ -85,6 +85,8 @@
             padding: 20px;
         }
     }
-
+    @include mobile{
+        margin-bottom: 0;
+    }
     
 }

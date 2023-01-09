@@ -3,9 +3,8 @@ import {useState} from 'react';
 import { AiOutlineMenu } from 'react-icons/ai'
 import {BsFillHouseDoorFill} from 'react-icons/bs'
 import {MdOutlineExplore} from 'react-icons/md'
-import {BiLogIn} from 'react-icons/bi'
 import {AiFillSetting, AiOutlineUser} from 'react-icons/ai'
-import {RiVipDiamondFill} from 'react-icons/ri'
+import { Link } from 'react-router-dom'
 
 
 const Header = () => {
@@ -21,9 +20,11 @@ const Header = () => {
              <button onClick={handleClick}><AiOutlineUser/></button>
             </div>
             <div style={{ display: isActive ? 'block' : 'none'}}  className='popupmenu'>
-                <li><BsFillHouseDoorFill/>Home</li>
-                <li><MdOutlineExplore/>Explore</li>
-                <li><AiFillSetting/>Setting</li>
+            <Link to={"/"}><li><BsFillHouseDoorFill/>Home</li></Link>
+
+            <Link to={"/explore"}><li><MdOutlineExplore/>Explore</li></Link>
+            
+            <Link to={"/setting"}><li><AiFillSetting/>Setting</li></Link>
             </div>
 
         </div>
