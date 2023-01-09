@@ -1,7 +1,6 @@
 {
-  "homepage": "https://hongandl15.github.io/hamovie",
+  "homepage": "https://hamovie.hongan.info",
   "name": "code",
-  "proxy": "https://api.themoviedb.org/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
