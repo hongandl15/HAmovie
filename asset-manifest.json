@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/hamovie/static/css/main.9b4fe71b.chunk.css",
-    "main.js": "/hamovie/static/js/main.ce210329.chunk.js",
-    "main.js.map": "/hamovie/static/js/main.ce210329.chunk.js.map",
-    "runtime-main.js": "/hamovie/static/js/runtime-main.b4596ed4.js",
-    "runtime-main.js.map": "/hamovie/static/js/runtime-main.b4596ed4.js.map",
-    "static/css/2.e41cfb15.chunk.css": "/hamovie/static/css/2.e41cfb15.chunk.css",
-    "static/js/2.abc2fd84.chunk.js": "/hamovie/static/js/2.abc2fd84.chunk.js",
-    "static/js/2.abc2fd84.chunk.js.map": "/hamovie/static/js/2.abc2fd84.chunk.js.map",
-    "static/js/3.7446f364.chunk.js": "/hamovie/static/js/3.7446f364.chunk.js",
-    "static/js/3.7446f364.chunk.js.map": "/hamovie/static/js/3.7446f364.chunk.js.map",
-    "index.html": "/hamovie/index.html",
-    "static/css/2.e41cfb15.chunk.css.map": "/hamovie/static/css/2.e41cfb15.chunk.css.map",
-    "static/css/main.9b4fe71b.chunk.css.map": "/hamovie/static/css/main.9b4fe71b.chunk.css.map",
-    "static/js/2.abc2fd84.chunk.js.LICENSE.txt": "/hamovie/static/js/2.abc2fd84.chunk.js.LICENSE.txt",
-    "static/media/boxicons.min.css": "/hamovie/static/media/boxicons.cbd149c5.ttf",
-    "static/media/slick-theme.css": "/hamovie/static/media/slick.c94f7671.ttf",
-    "static/media/unknown.592c4e01.jpg": "/hamovie/static/media/unknown.592c4e01.jpg"
+    "main.css": "/static/css/main.a9d431a3.chunk.css",
+    "main.js": "/static/js/main.ce210329.chunk.js",
+    "main.js.map": "/static/js/main.ce210329.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.dbd44763.js",
+    "runtime-main.js.map": "/static/js/runtime-main.dbd44763.js.map",
+    "static/css/2.f924f4ee.chunk.css": "/static/css/2.f924f4ee.chunk.css",
+    "static/js/2.abc2fd84.chunk.js": "/static/js/2.abc2fd84.chunk.js",
+    "static/js/2.abc2fd84.chunk.js.map": "/static/js/2.abc2fd84.chunk.js.map",
+    "static/js/3.7446f364.chunk.js": "/static/js/3.7446f364.chunk.js",
+    "static/js/3.7446f364.chunk.js.map": "/static/js/3.7446f364.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.f924f4ee.chunk.css.map": "/static/css/2.f924f4ee.chunk.css.map",
+    "static/css/main.a9d431a3.chunk.css.map": "/static/css/main.a9d431a3.chunk.css.map",
+    "static/js/2.abc2fd84.chunk.js.LICENSE.txt": "/static/js/2.abc2fd84.chunk.js.LICENSE.txt",
+    "static/media/boxicons.min.css": "/static/media/boxicons.cbd149c5.ttf",
+    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf",
+    "static/media/unknown.592c4e01.jpg": "/static/media/unknown.592c4e01.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b4596ed4.js",
-    "static/css/2.e41cfb15.chunk.css",
+    "static/js/runtime-main.dbd44763.js",
+    "static/css/2.f924f4ee.chunk.css",
     "static/js/2.abc2fd84.chunk.js",
-    "static/css/main.9b4fe71b.chunk.css",
+    "static/css/main.a9d431a3.chunk.css",
     "static/js/main.ce210329.chunk.js"
   ]
 }
