@@ -55,7 +55,7 @@ const API_URL = url
             setData(data.results);
         });
 
-    })
+    },[API_URL])
  
     return (
         <Slider {...settings}>
