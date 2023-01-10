@@ -56,6 +56,10 @@
         color: white;
         font-size: 20px;
     }
+    @include tablet{
+        width: 100%;
+        display: flex;
+    }
     @include mobile{
         display: flex;
     }

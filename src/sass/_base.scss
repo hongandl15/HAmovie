@@ -70,14 +70,6 @@ img {
 }
 
 @each $val in $numbers {
-    .grid-col-md-#{$val} {
-        @include tablet {
-            grid-template-columns: repeat($val, 1fr);
-        }
-    }
-}
-
-@each $val in $numbers {
     .grid-col-sm-#{$val} {
         @include mobile {
             grid-template-columns: repeat($val, 1fr);
@@ -89,21 +81,11 @@ img {
     width: 75%;
     margin-left: 5%;
     margin-right: 20%;
-    // margin: auto;
 }
 
 .main {
-    // margin-top: $header-height;
-    // margin-bottom: 2rem;
     min-height: 100vh;
 
-    @include tablet {
-        margin-top: calc(#{$header-tablet-height} + 20px);
-    }
-
-    @include mobile {
-        margin-top: calc(#{$header-mobile-height} + 10px);
-    }
 }
 
 .header_title{
@@ -143,6 +125,20 @@ hr{
 }
 
 
+@include tablet{
+    .similar {
+        display: none;
+    }
+    .container {
+        width: 95%;
+        margin-right:10%;
+        // margin: auto;
+    }
+
+    .header{
+        display: block;
+    }
+}
 @media only screen and (max-width: 600px) {
     .similar {
       display: none;

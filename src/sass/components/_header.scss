@@ -11,8 +11,12 @@
     z-index: 200;
     border-bottom: ridge  rgb(97, 97, 97);
     background-color: $main-color;
-    @include mobile{
+    @include tablet{
         display: block;
+        margin: auto;
+    }
+    @include mobile{
+        display: block; 
     }
     .Menuheader{
         &:hover{

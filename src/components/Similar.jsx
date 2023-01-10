@@ -57,9 +57,7 @@ const ProductSimilar = (movie) => {
     <div className="similar">
         <div className='search'>
           <div className='icon_search'><AiOutlineSearch/></div>
-          <Search>
-
-          </Search>
+          <Search/>
         </div>
         <h1>{type} movie</h1>      
         {

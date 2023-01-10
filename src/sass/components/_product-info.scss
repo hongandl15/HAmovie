@@ -5,7 +5,8 @@
         border-right: groove thin rgb(139, 131, 131) ;
         background-color: rgb(25, 25, 25);
         padding: 30px;
-        width: 10%;
+        width: 20%;
+        min-width: 150px;
         text-align: left;
         color: white;
 
@@ -27,10 +28,14 @@
             padding: 20px;
             font-size: 25px;
         }
+        @include tablet{
+            width: 30%;
+        }
         @include mobile{
             padding: 0px;
             width: 100%;
         }
+        
     }
 
 
@@ -61,8 +66,7 @@
                 color: red;
                 cursor: pointer;
             }
-            @include mobile{
-                
+            @include mobile{  
                 margin-bottom: 50px ;
             }
         }
@@ -78,14 +82,19 @@
                 font-size: 20px;
             }
         }
+        @include tablet{
+            width: 60%;
+        }
         @include mobile{
             width: 100%;
             margin-bottom: 30px;
         }
+        
     } 
     @include mobile{
         flex-direction: column;
     }
+    
 }
 .media{
     z-index: 100;
@@ -99,10 +108,16 @@
     iframe{
         margin: 26px;
         margin-bottom:40px ;
+        @include tablet{
+            margin-right: 20px;
+            width: 200px;
+            height: 150px;
+        } 
         @include mobile{
             margin-right: 20px;
             width: 180px;
             height: 120px;
         }
-    } 
+        
+    }
 }

@@ -14,10 +14,12 @@
         justify-content: center;
         .icon_search{
             margin-top: 20px;
+            margin-left: 10px;
             font-size: 40px;
         }
         input{
-            height: 40px;
+            width: 90%;
+            box-sizing: border-box;
             border-radius: 30px;
             height: 50px;
             margin-top: 14px;
@@ -26,6 +28,7 @@
             color: white;
             font-size: 20px;
         }
+
     }
 
     h1{
@@ -52,7 +55,8 @@
         img {
             text-align: left;
             left:0;
-            width: 100px;
+            max-width: 100px;
+            max-height: 150px;
             border-radius: 20px;
             background-color: rgb(73, 72, 72);
         }
