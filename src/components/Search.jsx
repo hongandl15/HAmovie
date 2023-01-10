@@ -1,5 +1,4 @@
-import { useHistory } from 'react-router-dom';
-
+import { useHistory} from 'react-router-dom';
 const Search = () => {
   const history = useHistory();
   const handleSubmit = (e) => {

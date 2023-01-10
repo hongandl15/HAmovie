@@ -36,7 +36,7 @@ const Explore = (props) => {
                         smCol={1}   
                         gap={10}
                     >
-                        <ShowMovie page={1} keyword={keyword} sort={sort}/>
+                        <ShowMovie page={1} key={keyword} keyword={keyword} sort={sort}/>
                     </Grid>
                     {/* <PageNumber number={5}/> */}
                 </SectionBodyCatalog>

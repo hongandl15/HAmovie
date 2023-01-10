@@ -33,8 +33,7 @@ const Home = () => {
             <Section>
             <div className='searchbar_responsive'>
                 <div className='icon_search'><AiOutlineSearch/></div>
-                <Search>
-                </Search>
+                <Search/>
             </div>
                 <SectionTitle>
                     Hot movies

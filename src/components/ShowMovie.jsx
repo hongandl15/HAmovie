@@ -27,7 +27,7 @@ else if (props.sort != null) {
         .then((data) => {
             setData(data.results);
         });
-    })
+    },[API_URL])
 
     return (
         <>

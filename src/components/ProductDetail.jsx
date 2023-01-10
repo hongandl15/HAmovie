@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {AiTwotoneStar} from 'react-icons/ai'
 import {GiVote} from 'react-icons/gi'
 import { Link } from 'react-router-dom'
@@ -8,6 +8,7 @@ import Trailer from './Trailer'
 const ProductDetail = (props) => {
     const IMG_URL = 'https://image.tmdb.org/t/p/w300/'
     const BANNER_URL = 'https://image.tmdb.org/t/p/original/'
+
     return (
         <div className="productDetail">
             <div className="productDetail__image">
@@ -46,6 +47,8 @@ const ProductDetail = (props) => {
 }
 
 export const ProductInfo = (props) => {
+
+
     return (
         <div className="productDetail">
             <div className="productInfo">
@@ -76,7 +79,7 @@ export const ProductInfo = (props) => {
                             <p>Release date: {props.movie.release_date}</p>
                         </div>
                     </div>
-                <Trailer type={'Trailer'} id = {props.movie.id} number= {2} width={350} height={250}></Trailer>
+                <Trailer type={'Trailer'} id = {props.movie.id} key={props.movie.id} number= {2} width={350} height={250}></Trailer>
             </div>
         </div>
 )

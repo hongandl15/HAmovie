@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, componentDidUpdate } from 'react'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
@@ -7,22 +7,23 @@ const TRAILER = 'https://www.youtube.com/embed/'
 
 const Trailer = (props) => {
     
-    const API_URL = 'https://api.themoviedb.org/3/movie/'+ props.id + '/videos?api_key=db95773a7fb212ba790d71f6adac0e7e&language=en-US'
+    var API_URL = 'https://api.themoviedb.org/3/movie/'+ props.id + '/videos?api_key=db95773a7fb212ba790d71f6adac0e7e&language=en-US'
+    const [url_set, setUrl] = useState([API_URL]);  
     const [movieData, setData] = useState([]);
-    const [url_set, setUrl] = useState(API_URL);
     var count = 0;
     var number = 10;
     if(props.number != null)
         number = props.number;
-
+        
+        
     useEffect(() =>{
         fetch(url_set)
         .then((res) => res.json())
         .then((data) => {
-            setData(data.results);  
             setUrl(API_URL)
+            setData(data.results);
         });
-    })
+    },[API_URL])
 
     return (
         <div className={"media"}>
