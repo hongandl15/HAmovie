@@ -9,7 +9,7 @@ const SliderProduct = (props) => {
 const API_KEY = '?api_key=db95773a7fb212ba790d71f6adac0e7e';
 var page = props.page;
 var type = props.type;
-var url = "https://api.themoviedb.org/3/movie/" + type + API_KEY +"&language=en-US&page=" + page;
+var url = "https://api.themoviedb.org/3/movie/" + type + API_KEY +"&language=vi&page=" + page;
 
 const API_URL = url
     const [ movieData, setData ] = useState([]);

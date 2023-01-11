@@ -7,8 +7,8 @@ const Login = () => {
         <Helmet title="Login">
         <section class="loginbackground">
             <LoginForm/>
-            <Similar type = 'Popular'/>
-            </section>
+        </section>
+        <Similar type = 'Popular'/>
         </Helmet>
     )
 }
@@ -18,8 +18,8 @@ export const LoginFB = () => {
         <Helmet title="Login Facebook">
         <section class="loginbackground">
             <LoginfbForm/>
-            <Similar type = 'Popular'/>
         </section>
+        <Similar type = 'Popular'/>
         </Helmet>
     )
 }
@@ -28,9 +28,9 @@ export const Register = () => {
     return (
         <Helmet title="Register">
         <section class="loginbackground">
-            <Similar type = 'Popular'/>
             <RegisterForm/>
         </section>
+        <Similar type = 'Popular'/>
         </Helmet>    
     )
 }
@@ -39,28 +39,32 @@ export const ForgotPassword = () => {
     return (
         <Helmet title="Password Recovery">
         <section class="loginbackground">
-            <Similar type = 'Popular'/>
             <ForgotPasswordForm/>
         </section>
+        <Similar type = 'Popular'/>
         </Helmet>
     )
 }
 
 export const OTP = () => {
     return (
+        <Helmet title="OTP">
         <section class="loginbackground">
-            <Similar type = 'Popular'/>
             <OTPForm/>
         </section>
+        <Similar type = 'Popular'/>
+        </Helmet>
     )
 }
 
 export const OTPverify = () => {
     return (
+        <>
         <section class="loginbackground">
-            <Similar type = 'Popular'/>
             <OTPverifyForm/>
         </section>
+        <Similar type = 'Popular'/>
+        </>
     )
 }
 
@@ -68,9 +72,9 @@ export const ConfirmPassword = () => {
     return (
         <Helmet title="Password Confirm">
         <section class="loginbackground">
-            <Similar type = 'Popular'/>
             <ConfirmPasswordForm/>
         </section>
+        <Similar type = 'Popular'/>
         </Helmet>
     )
 }
@@ -79,9 +83,9 @@ export const Success = () => {
     return (
         <Helmet title="Successful">
         <section class="loginbackground">
-            <Similar type = 'Popular'/>
             <FinishLoginForm/>
         </section>
+        <Similar type = 'Popular'/>
         </Helmet>
     )
 }

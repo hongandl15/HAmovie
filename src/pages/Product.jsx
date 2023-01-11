@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import ProductDetail, {ProductInfo} from '../components/ProductDetail'
 import Helmet from '../components/Helmet'
 import { useLocation } from 'react-router-dom'
@@ -8,16 +8,10 @@ import {AiOutlineSearch} from 'react-icons/ai'
 
 const Product = (props) => {
     const movie = useLocation().state.stateParam;
-    // const [movie, setMovie] = useState([movieparam]);  
-    
-    // useEffect(() => {
-    //     // window.scrollTo(0, 0)
-    //     setMovie(movieparam)
-    //   }, [movieparam])
 
     return (
         <Helmet title={movie.title}>                           
-            <Similar type ='Similar' id = {movie.id}/>  
+            <Similar key ={movie.id} type ='Similar' id = {movie.id}/>  
             <div className='searchbar_responsive'>
                 <div className='icon_search'><AiOutlineSearch/></div>
                 <Search/>

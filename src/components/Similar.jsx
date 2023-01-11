@@ -31,8 +31,8 @@ const ProductSimilar = (movie) => {
   const API_KEY = '?api_key=db95773a7fb212ba790d71f6adac0e7e';
   var page = 1;
   var type = 'Popular';
-  var url1 = "https://api.themoviedb.org/3/movie/" + id + '/'+ 'similar' + API_KEY +"&language=en-US&page=" + page;
-  var url2 = "https://api.themoviedb.org/3/movie/" + 'popular' + API_KEY +"&language=en-US&page=" + page;
+  var url1 = "https://api.themoviedb.org/3/movie/" + id + '/'+ 'similar' + API_KEY +"&language=vi&page=" + page;
+  var url2 = "https://api.themoviedb.org/3/movie/" + 'popular' + API_KEY +"&language=vi&page=" + page;
   var API_URL = url2
   if (props.id) {
     type = 'Similar'

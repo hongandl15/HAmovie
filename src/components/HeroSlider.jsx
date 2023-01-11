@@ -6,7 +6,7 @@ import Trailer from './Trailer'
 const HeroSlider = props => {
     
     const API_KEY = '?api_key=db95773a7fb212ba790d71f6adac0e7e';    
-    var url = "https://api.themoviedb.org/3/movie/" + 'popular' + API_KEY +"&language=en-US&page=" + 1;
+    var url = "https://api.themoviedb.org/3/movie/" + 'popular' + API_KEY +"&language=vi&page=" + 1;
 
     const API_URL = url
         const [movieData, setData ] = useState([]);

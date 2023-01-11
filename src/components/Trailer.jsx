@@ -1,4 +1,4 @@
-import React, { useEffect, useState, componentDidUpdate } from 'react'
+import React, { useEffect, useState} from 'react'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
@@ -7,7 +7,7 @@ const TRAILER = 'https://www.youtube.com/embed/'
 
 const Trailer = (props) => {
     
-    var API_URL = 'https://api.themoviedb.org/3/movie/'+ props.id + '/videos?api_key=db95773a7fb212ba790d71f6adac0e7e&language=en-US'
+    var API_URL = 'https://api.themoviedb.org/3/movie/'+ props.id + '/videos?api_key=db95773a7fb212ba790d71f6adac0e7e&language=en-US&with_original_language=vi'
     const [url_set, setUrl] = useState([API_URL]);  
     const [movieData, setData] = useState([]);
     var count = 0;

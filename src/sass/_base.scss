@@ -10,15 +10,19 @@
     user-select: none;   
 }
 
-@media (-webkit-device-pixel-ratio: 1.25) {
-    *{
-      zoom: 0.983;
+    
+  @media (-webkit-device-pixel-ratio: 1.25) {
+    .similar, .sidebar{
+      zoom: 0.8;
     }
   }
 
   @media (-webkit-device-pixel-ratio: 1.5) {
-    *{
-      zoom: 0.966;
+    body{
+      zoom: 0.7;
+    }
+    .hero-slider{
+        height: 100vh;
     }
   }
 
@@ -27,7 +31,8 @@ html {
 }
 
 body {
-    background-color: rgb(25, 25, 25);
+    // background-color: rgb(25, 25, 25);
+    background-color: $main-color;
     font-family: "Roboto", sans-serif;
     cursor: crosshair;
 }
@@ -153,3 +158,5 @@ hr{
         // margin: auto;
     }
   }
+
+

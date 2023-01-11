@@ -1,11 +1,13 @@
 $main-bg: aliceblue;
-$main-color: rgb(32, 30, 30);
+// $sub-color: rgb(32, 30, 30);
+$main-color: rgb(25, 25, 25);
 
-$txt-color:rgb(214, 234, 252);
+$txt-color:aliceblue;
+// $txt-color:rgb(0, 0, 0);
 
-$txt-main-color: aliceblue;
-$txt-second-color: aliceblue;
-$txt-white: aliceblue;
+$txt-main-color: $txt-color;
+$txt-second-color: $txt-color;
+$txt-white: $txt-color;
 $input-color: rgb(47, 44, 44);
 
 $btn-main-bg: $main-color;
