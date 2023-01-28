@@ -2,7 +2,8 @@ import React from 'react'
 import {AiTwotoneStar, AiOutlineDownload} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 const MovieWatch = (props) => {
-    const linkmovie = "https://www.2embed.to/embed/tmdb/movie?id=" + props.id
+    var linkmovie = "https://www.2embed.to/embed/tmdb/movie?id=" + props.id
+    if(props.tv) var linkmovie =  "https://www.2embed.to/embed/tmdb/tv?id=" + props.id + "&s=1R&e=1"
     return (
         <div className='movieWatch'>
             <iframe

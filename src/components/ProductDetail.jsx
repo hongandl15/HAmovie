@@ -14,7 +14,7 @@ const ProductDetail = (props) => {
             <div className="productDetail__image">
                 <img className='banner_img' src={BANNER_URL + props.movie.backdrop_path} alt="hình" />
                 <img className='poster_img' src={IMG_URL + props.movie.poster_path} alt="hình" />
-                <h3>{props.movie.title}</h3> 
+                <h3>{props.movie.title != null ? props.movie.title : props.movie.name}</h3> 
                 {/* <div className='movie_tag'>action</div> */}
                 <div className="watchbtn">
                 <Link to={{
@@ -79,7 +79,7 @@ export const ProductInfo = (props) => {
                             <p>Release date: {props.movie.release_date}</p>
                         </div>
                     </div>
-                <Trailer type={'Trailer'} id = {props.movie.id} key={props.movie.id} number= {2} width={350} height={250}></Trailer>
+                <Trailer type={'Trailer'} id = {props.movie.id} key={props.movie} number= {2} width={350} height={250}></Trailer>
             </div>
         </div>
 )

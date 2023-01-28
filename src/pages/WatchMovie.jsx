@@ -11,14 +11,16 @@ import Similar from '../components/Similar'
 const WatchMovie = () => {
 
     const movie = useLocation().state.stateParam;
-    console.log(movie.title)
+    console.log(movie.name)
+    console.log(movie.id)
+
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
     return (
-        <Helmet title={'Watch '+ movie.title}> 
+        <Helmet title={'Watch '+ (movie.title != null ? movie.title : movie.name)}> 
             <Similar type ='Similar' id = {movie.id}/>  
-            <MovieWatch id={movie.id} title={movie.title} overview={movie.overview} vote_average={movie.vote_average}/>  
+            <MovieWatch id={movie.id} title={(movie.title != null ? movie.title : movie.name)} overview={movie.overview} vote_average={movie.vote_average} tv = {movie.name}/>  
             <Comment link = {window.location.href}></Comment>
         </Helmet>
         

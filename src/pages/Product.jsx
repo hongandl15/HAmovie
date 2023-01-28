@@ -10,7 +10,7 @@ const Product = (props) => {
     const movie = useLocation().state.stateParam;
 
     return (
-        <Helmet title={movie.title}>                           
+        <Helmet title={movie.title != null ? movie.title : movie.name}>            
             <Similar key ={movie.id} type ='Similar' id = {movie.id}/>  
             <div className='searchbar_responsive'>
                 <div className='icon_search'><AiOutlineSearch/></div>

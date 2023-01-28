@@ -16,8 +16,8 @@ const ProductCard = (movie) => {
             }}>
                 <div className="product-card__image"> 
                         <div className='rating_card'>{movie.info.vote_average} <BsStarFill/></div>
-                        <img src={image !== image_null ? image : photo} alt= {movie.info.title} />
-                    <h3>{movie.info.title}</h3>   
+                        <img src={image !== image_null ? image : photo} alt= {movie.info.title != null ? movie.info.title : movie.info.name} />
+                    <h3>{movie.info.title != null ? movie.info.title : movie.info.name}</h3>   
                 </div>
                 {/* !== null ? this.getImage(image) : 'https://www.macmillandictionary.com/external/slideshow/thumb/Grey_thumb.png'   */}
             </Link>           

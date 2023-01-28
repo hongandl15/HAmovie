@@ -15,7 +15,7 @@ const ProductSimilar = (movie) => {
                   <div className="productSimilar__image">
                       <img width={'150px'} src={IMG_URL + movie.info.poster_path} alt="hình 1" />
                       <div className='info'>
-                          <h3>{movie.info.title}</h3> 
+                          <h3>{movie.info.title != null ? movie.info.title : movie.info.name}</h3> 
                           <h4>{movie.info.release_date}</h4>
                       </div>
                   </div>              
@@ -29,10 +29,10 @@ const ProductSimilar = (movie) => {
   if (props.id) {id = props.id}
 
   const API_KEY = '?api_key=db95773a7fb212ba790d71f6adac0e7e';
-  var page = 1;
+  // var page = 1;
   var type = 'Popular';
-  var url1 = "https://api.themoviedb.org/3/movie/" + id + '/'+ 'similar' + API_KEY +"&language=vi&page=" + page;
-  var url2 = "https://api.themoviedb.org/3/movie/" + 'popular' + API_KEY +"&language=vi&page=" + page;
+  var url1 = "https://api.themoviedb.org/3/movie/" + id + '/'+ 'similar' + API_KEY +"&language=vi&";
+  var url2 = "https://api.themoviedb.org/3/movie/" + 'popular' + API_KEY +"&language=vi&";
   var API_URL = url2
   if (props.id) {
     type = 'Similar'
@@ -61,7 +61,7 @@ const ProductSimilar = (movie) => {
         </div>
         <h1>{type} movie</h1>      
         {
-          (movieData.length === 0) ? <p></p>:
+          (movieData.length == 0) ? <p></p>:
               movieData.slice(0, 4).map((res, pos) => 
               <ProductSimilar info ={res} key={pos}/>,
               )
