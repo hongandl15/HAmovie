@@ -26,7 +26,7 @@ import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAqJK3QlkUQhW5vuHz3q-20yh6kJJG3Dt8",
-    authDomain: "fir-auth-article-ae547.firebaseapp.com",
+    authDomain: "hamovie.hongan.info",
     projectId: "fir-auth-article-ae547",
     storageBucket: "fir-auth-article-ae547.appspot.com",
     messagingSenderId: "718337691443",
