@@ -3,11 +3,11 @@ import {BsStarFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import photo from '../assets/images/unknown.jpg'
 
-const IMG_URL = 'https://image.tmdb.org/t/p/w300/'
+const IMG_URL = 'https://image.tmdb.org/t/p/w185'
 
 const ProductCard = (movie) => {
     var image = IMG_URL + movie.info.poster_path 
-    var image_null = "https://image.tmdb.org/t/p/w300/null"
+    var image_null = "https://image.tmdb.org/t/p/w185/null"
     return (
         <div className="product-card">
             <Link to={{

@@ -6,8 +6,8 @@ import Button from './Button'
 import Trailer from './Trailer'
 
 const ProductDetail = (props) => {
-    const IMG_URL = 'https://image.tmdb.org/t/p/w300/'
-    const BANNER_URL = 'https://image.tmdb.org/t/p/original/'
+    const IMG_URL = 'https://image.tmdb.org/t/p/w185/'
+    const BANNER_URL = 'https://image.tmdb.org/t/p/w1280/'
 
     return (
         <div className="productDetail">

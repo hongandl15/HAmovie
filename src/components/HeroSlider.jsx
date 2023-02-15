@@ -91,7 +91,7 @@ HeroSlider.propTypes = {
     auto: PropTypes.bool,
     timeOut: PropTypes.number
 }
-const BANNER_URL = 'https://image.tmdb.org/t/p/original/'
+const BANNER_URL = 'https://image.tmdb.org/t/p/w1280/'
 const HeroSliderItem = props => (
     <>
     <Link to={{
