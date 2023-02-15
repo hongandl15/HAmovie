@@ -13,17 +13,6 @@ const Login = () => {
     )
 }
 
-export const LoginFB = () => {
-    return (
-        <Helmet title="Login Facebook">
-        <section class="loginbackground">
-            <LoginfbForm/>
-        </section>
-        <Similar type = 'Popular'/>
-        </Helmet>
-    )
-}
-
 export const Register = () => {
     return (
         <Helmet title="Register">

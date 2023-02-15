@@ -1,18 +1,39 @@
-import React from 'react'
 import Helmet from '../components/Helmet'
 import HeroSlider from '../components/HeroSlider'
 import Section, { SectionTitle, SectionBody } from '../components/Section'
 import SliderProduct from '../components/Slider'
 import Similar from '../components/Similar'
-import { useEffect } from 'react'
 import {AiOutlineSearch} from 'react-icons/ai'
 import Search from '../components/Search'
+import { auth, db, logout } from "../components/firebase";
+import { query, collection, getDocs, where } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+// import { useNavigate } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 const Home = () => {
-
+    const [user, loading, error] = useAuthState(auth);
+    const [name, setName] = useState("");
+  //   const navigate = useNavigate();
+    const history = useHistory();
+    const fetchUser = async () => {
+      try {
+        const q = query(collection(db, "users"), where("uid", "==", user?.uid));
+        const doc = await getDocs(q);
+        const data = doc.docs[0].data();
+        setName(data.name);
+      } catch (err) {
+        console.error(err);
+        alert("An error occured while fetching user data");
+      }
+    };
     useEffect(() => {
         window.scrollTo(0, 0)
-      }, [])
+      if (loading) return;
+      if (!user) return history.push('/');
+      fetchUser();
+    }, [user, loading]);
 
     return (
         

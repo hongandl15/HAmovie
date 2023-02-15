@@ -1,11 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, logInWithEmailAndPassword, signInWithGoogle } from "./firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useHistory } from 'react-router-dom';
 
 export const LoginForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+//   const navigate = useNavigate();
+  const history = useHistory();
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
+    }
+    if (user) history.push("/");
+  }, [user, loading]);
+
   return (
           <form onSubmit className='loginform'>
-              <h1>Login</h1>
-              <h3>Email</h3>
+              <h1>Login </h1>
+              {/* <h3>Email</h3>
               <input type="email" />
               <h3>Password</h3>
               <input type="password" />
@@ -19,34 +35,17 @@ export const LoginForm = () => {
               </div>
               <Link to={"/forgotpassword"}>
               <div className='forgotpassword'>Forgot Password?</div>
-              </Link>
-              <div className='sociallogin'>
-              <Link to={"/loginfb"}>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1365px-Facebook_f_logo_%282019%29.svg.png" alt="" />
-              </Link>
-                {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/800px-Google_%22G%22_Logo.svg.png" alt="" /> */}
-              </div>     
-          </form>
-        );
-}
-
-export const LoginfbForm = () => {
-  return (
-          <form onSubmit className='loginformfb'>
-              <h1>facebook</h1>
-              <h3>Email</h3>
-              <input type="email" />
-              <h3>Password</h3>
-              <input type="password" />
-              <div className='buttonloginfb'>
-              <Link to={"/success"}>
-                  <button>Login</button>
-              </Link>
+              </Link> */}
               <Link to={"/login"}>
-                  <button>Back</button>
+              <button onClick={signInWithGoogle} className='sociallogin'>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/800px-Google_%22G%22_Logo.svg.png" alt="" />
+                <div> Login with google</div>
+              </button>  
+              {/* <button onClick={signInWithGoogle} className='sociallogin'>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1365px-Facebook_f_logo_%282019%29.svg.png" alt="" />
+                <div> Login with Facebook</div>
+              </button>   */}
               </Link>
-              </div>   
           </form>
         );
 }

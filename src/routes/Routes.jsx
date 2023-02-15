@@ -4,7 +4,7 @@ import Explore from '../pages/Explore'
 import Home from '../pages/Home'
 import Product from '../pages/Product'
 import WatchMovie from '../pages/WatchMovie'
-import Login, {LoginFB, Register, ForgotPassword, ConfirmPassword, OTP, Success, OTPverify} from '../pages/Login'
+import Login,{ Register, ForgotPassword, ConfirmPassword, OTP, Success, OTPverify} from '../pages/Login'
 import Profile, {Favorite, Subscriptions, History} from '../pages/Profile'
 import Subpage from '../pages/Subpage'
 import Payment, {PaymentMomoPage, PaymentSuccessPage} from '../pages/Payment'
@@ -19,6 +19,10 @@ import SearchPage from '../pages/Search'
 import Download from '../pages/Download'
 import Contact from '../pages/Contact'
 import Giftcode from '../pages/Giftcode'
+// import Login from "../components/Login"
+// import Register from "../components/Register"
+// import Reset from "../components/Reset"
+// import Dashboard from "../components/Dashboard"
 
 const Routes = () => {
     return (
@@ -43,7 +47,6 @@ const Routes = () => {
             <Route path='/download' component={Download}/>
             {/* Login/Register */}
             <Route path='/login' component={Login}/>
-            <Route path='/loginfb' component={LoginFB}/>
             <Route path='/register' component={Register}/>
             <Route path='/forgotpassword' component={ForgotPassword}/>
             <Route path='/otp' component={OTP}/>
@@ -67,6 +70,11 @@ const Routes = () => {
             <Route path='/contact' component={Contact}/>
             <Route path='/about' component={About}/>
             <Route path='/help' component={Help}/>
+
+            {/* <Route exact path="/login" element={Login} /> */}
+            {/* <Route exact path="/register" element={Register} /> */}
+            {/* <Route exact path="/reset" element={Reset} /> */}
+            {/* <Route exact path="/dashboard" element={Dashboard} /> */}
             
         </Switch>
     )

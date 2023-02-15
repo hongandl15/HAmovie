@@ -1,10 +1,13 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import {BsFillHouseDoorFill} from 'react-icons/bs'
 import {MdOutlineExplore} from 'react-icons/md'
-import {BiLogIn} from 'react-icons/bi'
+import {BiLogIn, BiLogOut} from 'react-icons/bi'
 import {AiFillSetting, AiOutlineSearch} from 'react-icons/ai'
-import {RiVipDiamondFill} from 'react-icons/ri'
+import {RiVipDiamondFill } from 'react-icons/ri'
+import { auth, db, logout } from "../components/firebase";
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useHistory } from 'react-router-dom';
 
 // const mainNav = [
 //     {
@@ -47,11 +50,35 @@ const SideBar = () => {
     // const menuLeft = useRef(null)
 
     // const menuToggle = () => menuLeft.current.classList.toggle('active')
+    const [user, loading, error] = useAuthState(auth);
+    // const [name, setName] = useState("");
+    const [avatar, setAvatar] = useState("https://icon-library.com/images/guest-icon-png/guest-icon-png-6.jpg");
+    const history = useHistory();
+
+    const fetchUser = async () => {
+      try {
+        // const q = query(collection(db, "users"), where("uid", "==", user?.uid));
+        // const doc = await getDocs(q);
+        // const data = doc.docs[0].data();
+        // setName(data.name);
+        setAvatar(auth.currentUser.photoURL);
+      } catch (err) {
+        console.error(err);
+        alert("An error occured while fetching user data");
+      }
+    };
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      if (loading) return;
+      if (!user || !auth.currentUser) return history.push('/');
+      fetchUser();
+    }, [user, loading, avatar]);
+
 
     return (
         <div className="sidebar" >
             <Link to={"/profile"}>
-                <img className='circleava' src="https://cdn-icons-png.flaticon.com/512/168/168882.png" alt="" /> 
+                <img className='circleava' src={avatar} alt="" /> 
             </Link>
         
             <Link to={"/subscription"}>
@@ -67,6 +94,8 @@ const SideBar = () => {
             <Link to={"/login"}><li><BiLogIn/></li></Link>
             
             <Link to={"/setting"}><li><AiFillSetting/></li></Link>
+            
+            <Link to={"/login"}><button onClick={logout}><li><BiLogOut/></li></button></Link>
            
         </div>
     )

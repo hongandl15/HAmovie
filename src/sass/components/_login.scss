@@ -92,22 +92,42 @@
 }
 
 .sociallogin{
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
     margin: auto;
-    text-align: center;
-    padding: 20px;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 50px;
     img{
         margin: 10px;
-        width: 40px;
+        width: 30px;
         &:hover{
             cursor: pointer;
             opacity: 0.8;
         }
     }
+    button, input[type="submit"], input[type="reset"] {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
 }
 
 .loginbackground{
     padding: 20%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.nguyenkimmall.com/images/detailed/697/top-15-phim-bom-tan-xuat-sac-nhat-vu-tru-marvel-thumbnail.jpg");
+    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.nguyenkimmall.com/images/detailed/697/top-15-phim-bom-tan-xuat-sac-nhat-vu-tru-marvel-thumbnail.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     @include mobile{
