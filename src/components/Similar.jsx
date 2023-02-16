@@ -50,7 +50,7 @@ const ProductSimilar = (movie) => {
           setData(data.results);
           setUrl(API_URL)
       });
-  }, [API_URL])
+  }, [url_set])
 
 
   return (

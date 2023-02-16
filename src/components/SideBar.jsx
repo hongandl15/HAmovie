@@ -57,10 +57,6 @@ const SideBar = () => {
 
     const fetchUser = async () => {
       try {
-        // const q = query(collection(db, "users"), where("uid", "==", user?.uid));
-        // const doc = await getDocs(q);
-        // const data = doc.docs[0].data();
-        // setName(data.name);
         setAvatar(auth.currentUser.photoURL);
       } catch (err) {
         console.error(err);
@@ -70,7 +66,10 @@ const SideBar = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
       if (loading) return;
-      if (!user || !auth.currentUser) return history.push('/');
+      if (!user || !auth.currentUser){
+        setAvatar("https://icon-library.com/images/guest-icon-png/guest-icon-png-6.jpg")
+        return history.push('/')
+      } 
       fetchUser();
     }, [user, loading, avatar]);
 
@@ -80,10 +79,10 @@ const SideBar = () => {
             <Link to={"/profile"}>
                 <img className='circleava' src={avatar} alt="" /> 
             </Link>
-        
+{/*         
             <Link to={"/subscription"}>
                 <RiVipDiamondFill className='circlevip'/>
-            </Link>
+            </Link> */}
             
             <Link to={"/"}><li><BsFillHouseDoorFill/></li></Link>
 

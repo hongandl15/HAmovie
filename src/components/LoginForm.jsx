@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { auth, logInWithEmailAndPassword, signInWithGoogle } from "./firebase";
+import { Link } from "react-router-dom";
+import { auth, signInWithGoogle } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useHistory } from 'react-router-dom';
 
 export const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
 //   const navigate = useNavigate();
   const history = useHistory();
@@ -21,7 +19,7 @@ export const LoginForm = () => {
   return (
           <form onSubmit className='loginform'>
               <h1>Login </h1>
-              {/* <h3>Email</h3>
+              <h3>Email</h3>
               <input type="email" />
               <h3>Password</h3>
               <input type="password" />
@@ -35,7 +33,7 @@ export const LoginForm = () => {
               </div>
               <Link to={"/forgotpassword"}>
               <div className='forgotpassword'>Forgot Password?</div>
-              </Link> */}
+              </Link>
               <Link to={"/login"}>
               <button onClick={signInWithGoogle} className='sociallogin'>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/800px-Google_%22G%22_Logo.svg.png" alt="" />

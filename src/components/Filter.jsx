@@ -15,16 +15,19 @@ export default function Filter() {
   return (
     <div className='filter'>
       <div className='filter_tags'>
-        <button> Action </button>
-        <button> Adventure </button>
-        <button> Animation </button>
-        <button> Comedy </button>
-        <button> Crime </button>
-        <button> Drama </button>
-        <button> Documentary </button>
-        <button> Fantasy </button>
-        <button> Horror </button>
-        <button> Thriller </button>
+      <select id="type" name="type">
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Animation">Animation</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Crime">Crime</option>
+        <option value="Drama">Drama</option>
+        <option value="Documentary">Documentary</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Horror">Horror</option>
+        <option value="Thriller">Thriller</option>
+      </select>
+
         <div className="filter_box">
           <div className='filter_date'>
             <div className="filter_date_title"> Release Dates</div>

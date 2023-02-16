@@ -1,15 +1,38 @@
-import React from 'react'
 import {AiOutlineUser, AiFillCamera, AiOutlineHistory, AiFillHeart} from 'react-icons/ai'
 import {RiVipCrown2Fill} from 'react-icons/ri'
+import { auth, db, logout } from "../components/firebase";
 import { Link } from 'react-router-dom'
-
-const imageurl  = "https://cdn-icons-png.flaticon.com/512/168/168882.png"
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useHistory } from 'react-router-dom';
 
 const ProfileSideBar = () => {
+    const [user, loading, error] = useAuthState(auth);
+    // const [user, setUser] = useState(auth.currentUser)
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [avatar, setAvatar] = useState("https://icon-library.com/images/guest-icon-png/guest-icon-png-6.jpg");
+    const history = useHistory();
+
+    const fetchUser = async () => {
+      try {
+        // setUser(auth.currentUser);
+        setAvatar(user.photoURL)
+      } catch (err) {
+        console.error(err);
+        alert("An error occured while fetching user data");
+      }
+    };
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      if (loading) return;
+      if (!user) return history.push('/login');
+      fetchUser();
+    }, [user, loading]);
     return (
             <div className="profilesidebar" >
                 <div className='avatar'>
-                    <img src={imageurl} alt=""/>
+                    <img src={avatar} alt=""/>
                     <Link to = '/avatar'>
                     <button className='avatarEdit'><AiFillCamera ></AiFillCamera></button>
                     </Link>
@@ -21,9 +44,9 @@ const ProfileSideBar = () => {
                     <Link to={"/profile"}>
                     <div className='dashboard'><AiOutlineUser> </AiOutlineUser> &nbsp; Account</div>
                     </Link>
-                    <Link to={"/mysubscriptions"}>
+                    {/* <Link to={"/mysubscriptions"}>
                     <div className='dashboard'><RiVipCrown2Fill> </RiVipCrown2Fill> &nbsp; Subscriptions</div> 
-                    </Link> 
+                    </Link>  */}
                     <Link to={"/history"}>
                     <div className='dashboard'><AiOutlineHistory> </AiOutlineHistory> &nbsp; History</div> 
                     </Link>

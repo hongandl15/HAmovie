@@ -1,33 +1,55 @@
-import React from 'react'
 import { RiVipCrown2Fill } from 'react-icons/ri'
 import { AiOutlineEdit } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import SliderProduct from './Slider'
 import Button from './Button'
+import { auth, db, logout } from "../components/firebase";
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useHistory } from 'react-router-dom';
 
 const ProfileAccount = () => {
+    const [user, loading, error] = useAuthState(auth);
+    // const [user, setUser] = useState(auth.currentUser)
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [avatar, setAvatar] = useState("https://icon-library.com/images/guest-icon-png/guest-icon-png-6.jpg");
+    const history = useHistory();
+
+    const fetchUser = async () => {
+      try {
+        // setUser(auth.currentUser);
+        setName(user.displayName)
+        setEmail(user.email)
+      } catch (err) {
+        console.error(err);
+        alert("An error occured while fetching user data");
+      }
+    };
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      if (loading) return;
+      if (!user) return history.push('/login');
+      fetchUser();
+    }, [user, loading]);
     return (
         <div className="profileLibrary" >
             <h1 style={{"color": "white", 'margin': '20px'}}>Thông tin tài khoản cá nhân</h1>
             <div class="profileDetail">
                 <h2>Display Name:</h2>
                 <div class='displayName'>
-                    <h3>Ân Nguyễn #1234</h3>
-                    <Link to={"/edit"}>
+                    <h3>{name}</h3>
+                    {/* <Link to={"/edit"}>
                         <button class='editButton'> <AiOutlineEdit></AiOutlineEdit></button>
-                    </Link>
+                    </Link> */}
                 </div>
                 <h2>Email:</h2>
                 <div class='displayEmail'>
-                    <h3>hongandl15@gmail.com</h3>
+                    <h3>{email}</h3>
                 </div>
-                <h2>Password:</h2>
-                <div class='displayPassword'>       
-                    <h3>*********</h3>
                     <Link to={"/password"}>
-                        <button class='editButton'> <AiOutlineEdit></AiOutlineEdit></button>
+                        <button class='editButton'> Change password <AiOutlineEdit></AiOutlineEdit></button>
                     </Link>
-                </div>
                     {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1365px-Facebook_f_logo_%282019%29.svg.png" alt="" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/800px-Google_%22G%22_Logo.svg.png" alt="" /> */}

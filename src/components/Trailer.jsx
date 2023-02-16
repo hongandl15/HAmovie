@@ -32,7 +32,8 @@ const Trailer = (props) => {
                 movieData.map((res, pos) => {
                     if (res.type === props.type && count < number){
                         count++
-                        return <iframe allowFullScreen width={props.width} height={props.height} title="trailer"  src={TRAILER + res.key}><h1>{res.key}</h1></iframe>
+                        return <iframe allowFullScreen width={props.width} height={props.height} title="trailer" style={{"background": "#000000"}}
+                         src={TRAILER + res.key}><h1>{res.key}</h1></iframe>
                     }
                 }
             )}                        

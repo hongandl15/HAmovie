@@ -13,27 +13,27 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useHistory } from 'react-router-dom';
 
 const Home = () => {
-    const [user, loading, error] = useAuthState(auth);
-    const [name, setName] = useState("");
-  //   const navigate = useNavigate();
-    const history = useHistory();
-    const fetchUser = async () => {
-      try {
-        const q = query(collection(db, "users"), where("uid", "==", user?.uid));
-        const doc = await getDocs(q);
-        const data = doc.docs[0].data();
-        setName(data.name);
-      } catch (err) {
-        console.error(err);
-        alert("An error occured while fetching user data");
-      }
-    };
+//     const [user, loading, error] = useAuthState(auth);
+//     const [name, setName] = useState("");
+//   //   const navigate = useNavigate();
+//     const history = useHistory();
+//     const fetchUser = async () => {
+//       try {
+//         const q = query(collection(db, "users"), where("uid", "==", user?.uid));
+//         const doc = await getDocs(q);
+//         const data = doc.docs[0].data();
+//         setName(data.name);
+//       } catch (err) {
+//         console.error(err);
+//         alert("An error occured while fetching user data");
+//       }
+//     };
     useEffect(() => {
         window.scrollTo(0, 0)
-      if (loading) return;
-      if (!user) return history.push('/');
-      fetchUser();
-    }, [user, loading]);
+    //   if (loading) return;
+    //   if (!user) return history.push('/');
+    //   fetchUser();
+    }, []);
 
     return (
         
