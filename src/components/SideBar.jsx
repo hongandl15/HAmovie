@@ -90,11 +90,11 @@ const SideBar = () => {
 
             <Link to={"/explore"}><li><MdOutlineExplore/></li></Link>
 
-            <Link to={"/login"}><li><BiLogIn/></li></Link>
-            
-            <Link to={"/setting"}><li><AiFillSetting/></li></Link>
-            
+            {/* <Link to={"/login"}><li><BiLogIn/></li></Link> */}
+          
             <Link to={"/login"}><button onClick={logout}><li><BiLogOut/></li></button></Link>
+
+            <Link to={"/setting"}><li><AiFillSetting/></li></Link>
            
         </div>
     )

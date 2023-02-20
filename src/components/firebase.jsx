@@ -12,9 +12,13 @@ import {
     getFirestore,
     query,
     getDocs,
+    getDoc,
     collection,
     where,
     addDoc,
+    updateDoc,
+    setDoc,
+    doc,
 } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -50,11 +54,42 @@ const signInWithGoogle = async () => {
     const docs = await getDocs(q);
     if (docs.docs.length === 0) {
       await addDoc(collection(db, "users"), {
-        uid: user.uid,
+        uid: user.uid,  
         name: user.displayName,
         authProvider: "google",
         email: user.email,
+        favorite: [],
       });
+    }
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+};
+
+const addFavorite = async (movie) => {
+  try {
+    // const q = query(collection(db, "users"), where("email", "==", email));
+    const docRef = doc(db, "users", "5LHGul7GzA8SimpSOUwA");
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      await updateDoc(doc(db, "users", "5LHGul7GzA8SimpSOUwA"), {
+        favorite: [movie]
+      });
+    }
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+};
+
+const getFavorite = async (name) => {
+  try {
+    const docRef = doc(db, "users", "K8f3XyY5pHZTBEe4Utvh");
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      console.log(docSnap.data())
     }
   } catch (err) {
     console.error(err);
@@ -110,6 +145,8 @@ const logInWithEmailAndPassword = async (email, password) => {
     auth,
     db,
     signInWithGoogle,
+    addFavorite,
+    getFavorite,
     logInWithEmailAndPassword,
     registerWithEmailAndPassword,
     sendPasswordReset,

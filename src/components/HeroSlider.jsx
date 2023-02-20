@@ -8,18 +8,8 @@ const HeroSlider = props => {
     const API_KEY = '?api_key=db95773a7fb212ba790d71f6adac0e7e';    
     var API_URL = "https://api.themoviedb.org/3/movie/" + 'popular' + API_KEY +"&language=vi&page=" + 1;
 
-        const [movieData, setData ] = useState([]);
-        const [url_set, setUrl] = useState(API_URL);
-
-        useEffect(() =>{
-            setUrl(API_URL)
-            fetch(url_set)
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                setData(data.results);
-            });
-        }, [url_set])
+    const [movieData, setData ] = useState([]);
+    const [url_set, setUrl] = useState(API_URL);
 
     const data = movieData
 
@@ -39,6 +29,16 @@ const HeroSlider = props => {
         const index = activeSlide - 1 < 0 ? data.length - 1 : activeSlide - 1
         setActiveSlide(index)
     }
+
+    useEffect(() => {
+        setUrl(API_URL)
+        fetch(url_set)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            setData(data.results);
+        });
+    }, [url_set])    
 
     useEffect(() => {
         if (props.auto) {

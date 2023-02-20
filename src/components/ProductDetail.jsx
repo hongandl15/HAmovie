@@ -4,6 +4,9 @@ import {GiVote} from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 import Button from './Button'
 import Trailer from './Trailer'
+import {auth, db, addFavorite, getFavorite } from "../components/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useHistory } from 'react-router-dom';
 
 const ProductDetail = (props) => {
     const IMG_URL = 'https://image.tmdb.org/t/p/w185/'
@@ -14,7 +17,7 @@ const ProductDetail = (props) => {
             <div className="productDetail__image">
                 <img className='banner_img' src={BANNER_URL + props.movie.backdrop_path} alt="hình" />
                 <img className='poster_img' src={IMG_URL + props.movie.poster_path} alt="hình" />
-                <h3>{props.movie.title != null ? props.movie.title : props.movie.name}</h3> 
+                <h3>{props.movie.title != null ? props.movie.title : props.movie.name}</h3>
                 {/* <div className='movie_tag'>action</div> */}
                 <div className="watchbtn">
                 <Link to={{
@@ -48,11 +51,33 @@ const ProductDetail = (props) => {
 
 export const ProductInfo = (props) => {
 
+    
+    const [user, loading, error] = useAuthState(auth);
+    const [email, setEmail] = useState("")
+    const history = useHistory();
+
+    const fetchUser = async () => {
+      try {
+        setEmail(auth.currentUser.email)
+      } catch (err) {
+        console.error(err);
+        alert("An error occured while fetching user data");
+      }
+    };
+    useEffect(() => {
+      if (loading) return;
+      if (!user || !auth.currentUser){
+        return history.push('/ProductDetail')
+      } 
+      fetchUser();
+    }, [user, loading, error]);
 
     return (
         <div className="productDetail">
             <div className="productInfo">
                     <div className='rating'>
+                        <button onClick={addFavorite(props.movie)}>{email}</button>
+                        {/* <button onClick={getFavorite(name)}>{name}</button> */}
                         <h1>Rating</h1>
                         <p className='rate'>{props.movie.vote_average} <AiTwotoneStar/></p>
                         <h1>Voting</h1>
