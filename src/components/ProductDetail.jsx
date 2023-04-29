@@ -67,7 +67,7 @@ export const ProductInfo = (props) => {
     useEffect(() => {
       if (loading) return;
       if (!user || !auth.currentUser){
-        return history.push('/ProductDetail')
+        return history.push('/login')
       } 
       fetchUser();
     }, [user, loading, error]);
