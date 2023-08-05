@@ -63,7 +63,7 @@ const signInWithGoogle = async () => {
     }
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    // alert(err.message);
   }
 };
 
@@ -79,7 +79,7 @@ const addFavorite = async (movie) => {
     }
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    // alert(err.message);
   }
 };
 
@@ -93,7 +93,7 @@ const getFavorite = async (name) => {
     }
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    // alert(err.message);
   }
 };
 
@@ -102,7 +102,7 @@ const logInWithEmailAndPassword = async (email, password) => {
       await signInWithEmailAndPassword(auth, email, password);
     } catch (err) {
       console.error(err);
-      alert(err.message);
+      // alert(err.message);
     }
   };
 
@@ -132,7 +132,7 @@ const logInWithEmailAndPassword = async (email, password) => {
       alert("Password reset link sent!");
     } catch (err) {
       console.error(err);
-      alert(err.message);
+      // alert(err.message);
     }
   };
 
